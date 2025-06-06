@@ -9,6 +9,9 @@
                     <div class="bg-white p-4 rounded shadow">
                         <div class="flex justify-between items-center mb-4">
                             <h3 class="font-semibold text-gray-700">Applicants List</h3>
+                            
+                            <h3 class="font-semibold text-gray-700">Add search and filter</h3>
+                       
                             <div class="space-x-1">
                                
                             </div>
