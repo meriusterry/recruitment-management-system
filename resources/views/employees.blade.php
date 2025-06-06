@@ -125,7 +125,7 @@
         <div
             x-show="open"
             x-transition
-           class="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50 pl-40"
+           class="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50 pl-40 bg-gray-700"
         >
             <div @click.away="open = false"
                  class="relative bg-white w-full max-w-3xl  shadow-lg p-4 overflow-hidden">
@@ -138,10 +138,10 @@
                         &times;
                     </button>
                 </div>
-  
+
                 <form method="POST" action="#" >
                     @csrf
-                    <div class="grid grid-cols-2 gap-4 mb-4 mt-2">
+                    <div class="grid grid-cols-2 gap-4 mb-4 mt-2 ">
                         <div>
                             <label class="block text-sm font-medium text-gray-700">First Name</label>
                             <input type="text" name="first_name" class="mt-1 block w-full border p-2" required>
@@ -189,6 +189,7 @@
                         </button>
                     </div>
                 </form>
+                
             </div>
         </div>
         <!-- End Modal -->

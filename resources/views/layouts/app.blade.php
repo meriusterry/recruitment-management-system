@@ -15,10 +15,10 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="flex min-h-screen bg-gray-100">
+        <div class="flex min-h-screen bg-gray-50">
 
             {{-- Sidebar --}}
-            <aside class="bg-gray-800 text-white w-64 p-4">
+            <aside class="bg-gray-900 text-white w-64 p-4">
                 <div class="logo text-xl font-semibold mb-8 flex items-center gap-2">
                     <div class="flex justify-center mb-0">
                         <img src="{{ asset('images/brand.gif') }}" alt="Logo" class="w-80 h-12 ">
@@ -34,10 +34,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                         Home
                     </a>
-                    <a href="#" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition-colors flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                        Company
-                    </a>
+
                     <a href="{{route('employees')}}" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition-colors flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-template"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path><path d="M7 3v18"></path><path d="M17 3v18"></path></svg>
                         Employees

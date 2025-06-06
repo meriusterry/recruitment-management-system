@@ -51,7 +51,7 @@
         <div
             x-show="open"
             x-transition
-           class="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50 pl-40"
+           class="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50 pl-40 bg-gray-700"
         >
             <div @click.away="open = false"
                  class="relative bg-white w-full max-w-3xl  shadow-lg p-4 overflow-hidden">

@@ -43,11 +43,12 @@
             </div>
             <div class="mb-6">
                 <button type="submit"
-                    class="w-full py-2 px-4 border border-transparent text-sm font-medium  text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700">LOGIN
+                    class="w-full py-2 px-4 border border-transparent text-sm font-medium  text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700">
+                    LOGIN
                     -></button>
             </div>
             <div class="text-center">
-                <a href="{{ url('forgot-password') }}" class="text-sm text-gray-600 hover:text-gray-900">Forgot
+                <a href="{{ url('forgot-password') }}" class="text-sm text-blue-600 hover:text-blue-900">Forgot
                     Password?</a>
             </div>
             <div class="text-center mt-4">

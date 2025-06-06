@@ -164,15 +164,15 @@
 <div id="experienceModal" class="fixed inset-0 bg-gray-700 bg-opacity-50 flex justify-center items-center hidden">
     <form method="POST" action="{{ route('cvs.store') }}" class="w-[600px] mx-auto bg-white p-4 shadow-lg rounded-sm">
         @csrf
-        <h2 class="text-xl font-bold text-center mb-4">Add Experience</h2>
+        <h2 class="text-xl font-bold text-center mb-0">Add Experience</h2>
 
-        <label class="block mt-4 font-semibold">Company Name</label>
+        <label class="block mt-2 font-semibold">Company Name</label>
         <input name="company_name" type="text" placeholder="Company Name" class="w-full p-2 border rounded mt-2">
 
-        <label class="block mt-4 font-semibold">Job Title</label>
+        <label class="block mt-2 font-semibold">Job Title</label>
         <input name="job_title" type="text" placeholder="Job Title" class="w-full p-2 border rounded mt-2">
 
-        <div class="flex gap-4 mt-4">
+        <div class="flex gap-4 mt-2">
             <div class="w-1/2">
                 <label class="block font-semibold">Start Date</label>
                 <input name="start_date" type="date" class="w-full p-2 border rounded mt-2">
@@ -183,14 +183,17 @@
             </div>
         </div>
 
-        <label class="block mt-4 font-semibold">Location</label>
+        <label class="block mt-2 font-semibold">Location</label>
         <input name="location" type="text" placeholder="Location" class="w-full p-2 border rounded mt-2">
 
-        <label class="block mt-4 font-semibold">Summary</label>
+        <label class="block mt-2 font-semibold">Summary</label>
         <textarea name="experience_summary" placeholder="Company summary" rows="4" class="w-full p-2 border rounded mt-2"></textarea>
 
-        <button type="submit" class="mt-4 w-full p-2 bg-green-500 text-white rounded">Submit</button>
-        <button type="button" id="closeExperienceModal" class="mt-2 w-full p-2 bg-blue-500 text-white rounded">Close</button>
+        <div class="flex gap-2 mt-2 justify-end">
+            <button type="submit" class="p-2 bg-green-500 text-white rounded">Submit</button>
+            <button type="button" id="closeExperienceModal" class="p-2 bg-blue-500 text-white rounded">Close</button>
+        </div>
+        
     </form>
 </div>
 
@@ -199,22 +202,25 @@
     <div id="qualificationModal" class="fixed inset-0 bg-gray-700 bg-opacity-50 flex justify-center items-center hidden">
         <form method="POST" action="{{ route('cvs.store') }}" class="w-[600px] mx-auto bg-white p-4 shadow-lg rounded-sm">
             @csrf
-            <h2 class="text-xl font-bold text-center mb-4">Add Qualification</h2>
+            <h2 class="text-xl font-bold text-center mb-2">Add Qualification</h2>
     
-            <label class="block mt-4 font-semibold">Qualification</label>
+            <label class="block mt-2 font-semibold">Qualification</label>
             <input name="qualification" type="text" placeholder="Qualification Title" class="w-full p-2 border rounded mt-2">
     
-            <label class="block mt-4 font-semibold">Institution</label>
+            <label class="block mt-2 font-semibold">Institution</label>
             <input name="institution" type="text" placeholder="Institution" class="w-full p-2 border rounded mt-2">
     
-            <label class="block mt-4 font-semibold">Date Completed</label>
+            <label class="block mt-2 font-semibold">Date Completed</label>
             <input name="date_completed" type="date" class="w-full p-2 border rounded mt-2">
     
-            <label class="block mt-4 font-semibold">Summary</label>
+            <label class="block mt-2 font-semibold">Summary</label>
             <textarea name="qualification_summary" placeholder="Qualification summary" rows="4" class="w-full p-2 border rounded mt-2"></textarea>
     
-            <button type="submit" class="mt-4 w-full p-2 bg-green-500 text-white rounded">Submit</button>
-            <button type="button" id="closeQualificationModal" class="mt-2 w-full p-2 bg-blue-500 text-white rounded">Close</button>
+            <div class="flex gap-2 mt-2 justify-end">
+                <button type="submit" class="p-2 bg-green-500 text-white rounded">Submit</button>
+                <button type="button" id="closeQualificationModal" class="p-2 bg-blue-500 text-white rounded">Close</button>
+            </div>
+
         </form>
     </div>
     
@@ -223,12 +229,15 @@
     <div id="biographyModal" class="fixed inset-0 bg-gray-700 bg-opacity-50 flex justify-center items-center hidden">
         <form method="POST" action="{{ route('cvs.store') }}" class="w-[600px] mx-auto bg-white p-4 shadow-lg rounded-sm"> 
             @csrf
-            <h2 class="text-xl font-bold text-center mb-4">Add Biography</h2>
+            <h2 class="text-xl font-bold text-center mb-2">Add Biography</h2>
     
             <textarea name="biography" placeholder="Biography" class="w-full p-2 border rounded mt-2">{{  $data->biography ?? '' }}</textarea>
     
-            <button type="submit" class="mt-4 w-full p-2 bg-green-500 text-white rounded">Submit</button>
-            <button type="button" id="closeBiographyModal" class="mt-2 w-full p-2 bg-blue-500 text-white rounded">Close</button>
+            <div class="flex gap-2 mt-2 justify-end">
+                <button type="submit" class="p-2 bg-green-500 text-white rounded">Submit</button>
+                <button type="button" id="closeBiographyModal" class="p-2 bg-blue-500 text-white rounded">Close</button>
+            </div>
+           
         </form>
     </div>
     
@@ -238,15 +247,18 @@
     <div id="personalDetailsModal" class="fixed inset-0 bg-gray-700 bg-opacity-50 flex justify-center items-center hidden">
         <form method="POST" action="{{ route('cvs.store') }}" class="w-[600px] mx-auto bg-white p-4 shadow-lg rounded-sm">
             @csrf
-            <h2 class="text-xl font-bold text-center mb-4">Add Personal Details</h2>
+            <h2 class="text-xl font-bold text-center mb-2">Add Personal Details</h2>
     
             <input name="full_name" type="text" placeholder="Full Name" class="w-full p-2 border rounded mt-2">
             <input name="date_of_birth" type="text" placeholder="Date of Birth" class="w-full p-2 border rounded mt-2">
             <input name="gender" type="text" placeholder="Gender" class="w-full p-2 border rounded mt-2">
             <input name="street_address" type="text" placeholder="Street Address" class="w-full p-2 border rounded mt-2">
     
-            <button type="submit" class="mt-4 w-full p-2 bg-green-500 text-white rounded">Submit</button>
-            <button type="button" id="closePersonalDetailsModal" class="mt-2 w-full p-2 bg-blue-500 text-white rounded">Close</button>
+            <div class="flex gap-2 mt-2 justify-end">
+                <button type="submit" class="p-2 bg-green-500 text-white rounded">Submit</button>
+                <button type="button" id="closePersonalDetailsModal" class="p-2 bg-blue-500 text-white rounded">Close</button>
+            </div>
+           
         </form>
     </div>
     

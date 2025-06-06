@@ -16,20 +16,35 @@ class Application extends Model
         'status',
     ];
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
-
     public function job()
     {
         return $this->belongsTo(Vacancy::class);
     }
 
-    public function cv()
-    {
-        return $this->belongsTo(CV::class);
-    }
+
+/*public function cv()
+{
+    return $this->belongsTo(Cv::class); // Ensure 'cv_id' exists in `applications`
+}
+*/
+public function user()
+{
+    return $this->belongsTo(User::class);
+}
+
+public function cv()
+{
+    return $this->belongsTo(Cv::class);
+}
+
+public function vacancy()
+{
+    return $this->belongsTo(Vacancy::class);
+}
+
+
+
+
 
     
 }

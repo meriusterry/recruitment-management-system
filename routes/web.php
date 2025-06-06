@@ -37,6 +37,32 @@ Route::middleware('auth')->group(function () {
             return view('users'); //if you dont have a controller
         })->name('users');
 
+      /*  Route::get('/applicants', function () {
+            return view('applicants'); //if you dont have a controller
+        })->name('applicants');
+
+
+
+Route::get('/process', function () {
+    return view('process'); //if you dont have a controller
+})->name('process');*/
+
+Route::get('/application-process', function () {
+    return view('application-process'); // replace with your actual Blade file name
+})->name('application-process');
+
+
+Route::get('/nnn', function () {
+    return view('nnn');
+})->name('nnn');
+
+Route::get('/documents', function () {
+    return view('documents');
+})->name('documents');
+
+Route::get('/applicant_resume', function () {
+    return view('applicant_resume'); //if you dont have a controller
+})->name('applicant_resume');
 
         Route::get('/resume', function () {
             return view('resume');
@@ -51,6 +77,7 @@ Route::middleware('auth')->group(function () {
    // Route::get('/resume', [CVController::class, 'showResume'])->name('resume.show');
     Route::get('/resume', [CVController::class, 'show'])->name('resume');
 
+ 
 
     ///
     Route::post('/applications', [ApplicationController::class, 'store'])->name('applications.store');
@@ -58,6 +85,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/resume', [CVController::class, 'showResume'])->name('resume');
 
 Route::get('/dashboard', [DashboardController::class, 'totalvacancy'])->name('dashboard');
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Route::get('/applicants/{job}', [ApplicationController::class, 'showApplicants'])->name('applicants');
+
+//Route::get('/process/{user}', [ApplicationController::class, 'process'])->name('process');
+
+
+Route::get('/process', [ApplicationController::class, 'process'])->name('process');
+
+
+
 
 
 });

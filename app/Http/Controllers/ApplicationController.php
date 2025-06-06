@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Vacancy;
 use App\Models\Application;
 use Illuminate\Http\Request;
+use App\Models\User;
+
 use Illuminate\Support\Facades\Auth;
 
 class ApplicationController extends Controller
@@ -54,5 +57,44 @@ if (!$user->cv) {
        // return redirect()->back()->with('success', 'Application submitted successfully!');
     
     
+       public function showApplicants($vacancyId)
+       {
+           $vacancy = Vacancy::findOrFail($vacancyId);
+       
+           $applications = Application::with(['user', 'cv'])
+               ->where('vacancy_id', $vacancyId)
+               ->get();
+       
+           /* Debug output
+           foreach ($applications as $app) {
+               echo $app->user->name . ' | ';
+               echo $app->user->email . ' | ';
+               echo optional($app->cv)->biography . '<br>';
+           }
+       */
+            return view('applicants', compact('vacancy', 'applications'));
+       }
+       public function process(Request $request)
+       {
+           // Fetch the user ID from the query string
+           $userId = $request->query('id');
+           
+           // Fetch the user and related data
+           $user = User::with(['cv', 'applications', 'cv.experiences', 'cv.qualifications'])->findOrFail($userId);
+       
+           // Return the view with the user data
+           return view('process', compact('user'));
+       }
+       
+
+       
+       
+       
+
+       
+       
+       
+       
+       
 
 }

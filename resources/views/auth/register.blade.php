@@ -55,7 +55,7 @@
 
             <div class="mb-6">
                 <button type="submit"
-                    class="w-full py-2 px-4 border border-transparent text-sm font-medium text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700">
+                    class="w-full py-2 px-4 border border-transparent text-sm font-medium text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700">
                     REGISTER ->
                 </button>
             </div>

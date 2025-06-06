@@ -19,4 +19,12 @@ class Vacancy extends Model
     {
         return $this->hasMany(Application::class);
     }
+
+    public function applicants()
+{
+    return $this->hasMany(Application::class);
+}
+
+
+
 }

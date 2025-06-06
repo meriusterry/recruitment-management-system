@@ -40,5 +40,6 @@ class CV extends Model
         return $this->hasMany(Qualification::class, 'cv_id');
     }
     
+    
 
 }

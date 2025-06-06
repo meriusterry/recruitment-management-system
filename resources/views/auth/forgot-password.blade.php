@@ -16,7 +16,7 @@
             <img src="{{ asset('images/brand.gif') }}" alt="Logo" class="w-80 h-20">
         </div>
 
-        <h2 class="text-2xl font-bold mb-4">Forgot Password</h2>
+        <h2 class="text-2xl font-bold mb-4 ">Forgot Password</h2>
 
         <p class="mb-4 text-sm text-gray-600">
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
@@ -41,13 +41,13 @@
 
             <div class="mb-6">
                 <button type="submit"
-                    class="w-full py-2 px-4 border border-transparent text-sm font-medium text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700">
+                    class="w-full py-2 px-4 border border-transparent text-sm font-medium text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700">
                     Email Password Reset Link
                 </button>
             </div>
 
             <div class="text-center">
-                <a href="{{ route('login') }}" class="text-sm text-gray-600 hover:text-gray-900">Back to login</a>
+                <a href="{{ route('login') }}" class="text-sm text-blue-600 hover:text-blue-800">Back to login</a>
             </div>
         </form>
     </div>
