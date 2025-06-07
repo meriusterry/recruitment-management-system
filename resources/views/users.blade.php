@@ -41,6 +41,36 @@
                                         <td class="px-4 py-2">Admin</td>
                                         <td class="px-4 py-2"><button class="text-blue-600 hover:underline">✏️</button></td>
                                     </tr>
+                                     <!-- Dummy data: Replace with loop for dynamic content -->
+                                    <tr class="border-t">
+                                        <td class="px-4 py-2">Terry Ntuli</td>
+                                        <td class="px-4 py-2">Software Developer</td>
+                                        <td class="px-4 py-2">terry@gmail.com</td>
+                                        <td class="px-4 py-2">0935052387</td>
+                                        <td class="px-4 py-2">Admin</td>
+                                        <td class="px-4 py-2"><button class="text-blue-600 hover:underline">✏️</button></td>
+                                    </tr>
+                                    <!-- More rows... -->
+                                     <!-- Dummy data: Replace with loop for dynamic content -->
+                                    <tr class="border-t">
+                                        <td class="px-4 py-2">Terry Ntuli</td>
+                                        <td class="px-4 py-2">Software Developer</td>
+                                        <td class="px-4 py-2">terry@gmail.com</td>
+                                        <td class="px-4 py-2">0935052387</td>
+                                        <td class="px-4 py-2">Admin</td>
+                                        <td class="px-4 py-2"><button class="text-blue-600 hover:underline">✏️</button></td>
+                                    </tr>
+                                    <!-- More rows... -->
+                                     <!-- Dummy data: Replace with loop for dynamic content -->
+                                    <tr class="border-t">
+                                        <td class="px-4 py-2">Terry Ntuli</td>
+                                        <td class="px-4 py-2">Software Developer</td>
+                                        <td class="px-4 py-2">terry@gmail.com</td>
+                                        <td class="px-4 py-2">0935052387</td>
+                                        <td class="px-4 py-2">Admin</td>
+                                        <td class="px-4 py-2"><button class="text-blue-600 hover:underline">✏️</button></td>
+                                    </tr>
+                                    <!-- More rows... -->
                                     <!-- More rows... -->
                                 </tbody>
                             </table>
