@@ -45,7 +45,7 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-/*
+    /*
     public function applications()
 {
     return $this->hasMany(Application::class);
@@ -58,23 +58,14 @@ public function cv()
     return $this->hasOne(Cv::class);
 }*/
 
-// User.php
-public function cv()
-{
-    return $this->hasOne(Cv::class);
-}
+    // User.php
+    public function cv()
+    {
+        return $this->hasOne(Cv::class);
+    }
 
-public function applications()
-{
-    return $this->hasMany(Application::class);
-}
-
-
-
-
-/////////////////////////
-
-
-
-
+    public function applications()
+    {
+        return $this->hasMany(Application::class);
+    }
 }
