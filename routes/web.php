@@ -15,8 +15,7 @@ use App\Http\Controllers\ApplicationController;
 
 Route::get('/', function () {
     $data = Vacancy::where('closing_date', '>=', Carbon::today())
-    ->orderBy('created_at', 'desc')  // Sort by created_at in descending order
-    ->get();
+    ->orderBy('created_at', 'desc')  
     return view('welcome', compact('data'));
 });
 
@@ -30,25 +29,19 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/employees', function () {
-            return view('employees'); //if you dont have a controller
+            return view('employees'); 
         })->name('employees');
 
         Route::get('/users', function () {
-            return view('users'); //if you dont have a controller
+            return view('users'); 
         })->name('users');
 
-      /*  Route::get('/applicants', function () {
-            return view('applicants'); //if you dont have a controller
-        })->name('applicants');
-
-
-
 Route::get('/process', function () {
-    return view('process'); //if you dont have a controller
+    return view('process'); 
 })->name('process');*/
 
 Route::get('/application-process', function () {
-    return view('application-process'); // replace with your actual Blade file name
+    return view('application-process'); 
 })->name('application-process');
 
 
@@ -61,7 +54,7 @@ Route::get('/documents', function () {
 })->name('documents');
 
 Route::get('/applicant_resume', function () {
-    return view('applicant_resume'); //if you dont have a controller
+    return view('applicant_resume');
 })->name('applicant_resume');
 
         Route::get('/resume', function () {
@@ -74,24 +67,17 @@ Route::get('/applicant_resume', function () {
     Route::delete('/vacancy/{id}', [VacancyController::class, 'destroy'])->name('vacancy.destroy');
 
     Route::post('/cvs/store', [CVController::class, 'store'])->name('cvs.store');
-   // Route::get('/resume', [CVController::class, 'showResume'])->name('resume.show');
+  
     Route::get('/resume', [CVController::class, 'show'])->name('resume');
 
- 
-
-    ///
     Route::post('/applications', [ApplicationController::class, 'store'])->name('applications.store');
 
     Route::get('/resume', [CVController::class, 'showResume'])->name('resume');
 
 Route::get('/dashboard', [DashboardController::class, 'totalvacancy'])->name('dashboard');
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Route::get('/applicants/{job}', [ApplicationController::class, 'showApplicants'])->name('applicants');
-
-//Route::get('/process/{user}', [ApplicationController::class, 'process'])->name('process');
-
 
 Route::get('/process', [ApplicationController::class, 'process'])->name('process');
 
