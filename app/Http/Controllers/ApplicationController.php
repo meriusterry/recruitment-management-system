@@ -51,11 +51,6 @@ if (!$user->cv) {
     return redirect()->back()->with('success', 'Application submitted successfully!');
 }
 
-          //  return redirect()->back()->withErrors(['cv' => 'You must complete your CV before submitting an application.']);
-    
-    
-       // return redirect()->back()->with('success', 'Application submitted successfully!');
-    
     
        public function showApplicants($vacancyId)
        {
@@ -64,14 +59,7 @@ if (!$user->cv) {
            $applications = Application::with(['user', 'cv'])
                ->where('vacancy_id', $vacancyId)
                ->get();
-       
-           /* Debug output
-           foreach ($applications as $app) {
-               echo $app->user->name . ' | ';
-               echo $app->user->email . ' | ';
-               echo optional($app->cv)->biography . '<br>';
-           }
-       */
+
             return view('applicants', compact('vacancy', 'applications'));
        }
        public function process(Request $request)

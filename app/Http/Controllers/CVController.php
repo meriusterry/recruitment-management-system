@@ -13,7 +13,6 @@ class CVController extends Controller
 
     public function store(Request $request)
     {
-        // Validate general CV fields
         $validatedCV = $request->validate([
             'title' => 'nullable|string|max:255',
             'summary' => 'nullable|string',
