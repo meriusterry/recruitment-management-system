@@ -10,13 +10,20 @@ class CV extends Model
 {
     use HasFactory;
 
-    protected $table = 'cvs'; // ✅ Correct table name
+    protected $table = 'cvs';
 
     protected $fillable = [
-        'user_id', 'title', 'summary',
-        
-       
-        'biography', 'full_name', 'date_of_birth', 'gender', 'street_address',];
+        'user_id',
+        'title',
+        'summary',
+
+
+        'biography',
+        'full_name',
+        'date_of_birth',
+        'gender',
+        'street_address',
+    ];
 
     public function user()
     {
@@ -28,18 +35,13 @@ class CV extends Model
         return $this->hasMany(Application::class);
     }
 
-    ////////
     public function experiences()
     {
         return $this->hasMany(Experience::class, 'cv_id');
     }
-    
 
     public function qualifications()
     {
         return $this->hasMany(Qualification::class, 'cv_id');
     }
-    
-    
-
 }
