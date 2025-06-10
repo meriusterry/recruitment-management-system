@@ -1,8 +1,6 @@
 <x-app-layout>
     <div x-data="{ open: false }" class="flex relative min-h-screen">
-       
-
-        <!-- Main Content -->
+    
         <main class="flex-1 py-0">
             <div class="bg-white dark:bg-white overflow shadow-sm">
                 <div class="p-4 text-gray-900 dark:text-gray-100">
@@ -17,7 +15,6 @@
                             <h2 class="text-xl font-bold text-gray-800 mb-6">Job Application Process</h2>
 
                             <div class="flex items-center justify-between space-x-4 overflow-x-auto">
-                                <!-- Step 1 -->
                                 <div class="flex flex-col items-center text-center">
                                     <div class="w-20 h-20 rounded-full bg-orange-500 text-white flex items-center justify-center text-2xl font-bold">
                                         <i class="fas fa-briefcase"></i>
@@ -27,7 +24,6 @@
 
                                 <div class="h-1 w-10 bg-orange-500"></div>
 
-                                <!-- Step 2 -->
                                 <div class="flex flex-col items-center text-center">
                                     <div class="w-20 h-20 rounded-full bg-blue-500 text-white flex items-center justify-center text-2xl font-bold">
                                         <i class="fas fa-pen"></i>
@@ -37,7 +33,6 @@
 
                                 <div class="h-1 w-10 bg-blue-500"></div>
 
-                                <!-- Step 3 -->
                                 <div class="flex flex-col items-center text-center">
                                     <div class="w-20 h-20 rounded-full bg-green-500 text-white flex items-center justify-center text-2xl font-bold">
                                         <i class="fas fa-check"></i>
@@ -47,7 +42,7 @@
 
                                 <div class="h-1 w-10 bg-green-500"></div>
 
-                                <!-- Step 4 -->
+
                                 <div class="flex flex-col items-center text-center">
                                     <div class="w-20 h-20 rounded-full bg-pink-500 text-white flex items-center justify-center text-2xl font-bold">
                                         <i class="fas fa-comments"></i>
@@ -57,7 +52,6 @@
 
                                 <div class="h-1 w-10 bg-pink-500"></div>
 
-                                <!-- Step 5 -->
                                 <div class="flex flex-col items-center text-center">
                                     <div class="w-20 h-20 rounded-full bg-teal-500 text-white flex items-center justify-center text-2xl font-bold">
                                         <i class="fas fa-handshake"></i>
@@ -83,7 +77,6 @@
         </main>
     </div>
 
-    <!-- Tailwind and AlpineJS Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
 
 </x-app-layout>
