@@ -81,7 +81,7 @@
                                   <p class="text-xs text-gray-500 flex items-center">📍 <span x-text="job.location"></span></p>
                                 </div>
                               </div>
-                              <p class="text-xs text-gray-500 mb-2">Full Time</p>
+                         
                               <div class="flex justify-between text-xs">
                                 <span class="bg-gray-200 px-2 py-1 rounded" x-text="'R ' + job.salary_rate"></span>
                                 <span class="text-gray-500" x-text="'Closing Date: ' + job.closing_date"></span>
