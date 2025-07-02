@@ -114,7 +114,7 @@
                         <div class="w-2/3 bg-gray-200 p-4 rounded shadow" x-show="selectedJob">
                           <div class="flex justify-between items-center mb-4">
                             <div>
-                              <h3 class="text-lg font-semibold" x-text="'Job Tittle : '+selectedJob.job_title"></h3>
+                              <h3 class="text-lg font-semibold text-blue-700" x-text="+selectedJob.job_title"></h3>
                               <p class="text-sm text-gray-500">📍 <span x-text="selectedJob.location"></span></p>
                             </div>
                             <a :href="'{{ route('resume') }}?vacancy_id=' + selectedJob.id">
@@ -128,7 +128,7 @@
                           <p class="text-sm text-gray-600 mb-4" x-text="selectedJob.intro"></p>
             
                           <div class="mb-4">
-                            <h4 class="font-lg text-black mb-1">Job Description</h4>
+                            <h4 class="font-lg text-black mb-1"> Description</h4>
                             <p class="text-sm text-gray-600" x-text="selectedJob.job_description"></p>
                           </div>
             
