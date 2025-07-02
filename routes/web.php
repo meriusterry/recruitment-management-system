@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/process', function () {
     return view('process'); 
-})->name('process');*/
+})->name('process');
 
 Route::get('/application-process', function () {
     return view('application-process'); 
