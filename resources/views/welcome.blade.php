@@ -77,7 +77,7 @@
                                  @click="selectJob(job)">
                               <div class="flex items-center mb-2">
                                 <div>
-                                  <h3 class="font-semibold text-sm" x-text="'Job Title :' + job.job_title"></h3>
+                                  <h3 class="font-semibold text-sm text-blue-700" x-text=" + job.job_title"></h3>
                                   <p class="text-xs text-gray-500 flex items-center">📍 <span x-text="job.location"></span></p>
                                 </div>
                               </div>
