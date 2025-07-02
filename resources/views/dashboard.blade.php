@@ -6,7 +6,7 @@
             <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-8 ">
                 <div class="bg-white rounded-md shadow-md p-4 flex flex-col justify-between">
                     <h2 class="text-lg font-semibold text-gray-700 mb-2">Total Vacancies/Job</h2>
-                    <div class="text-3xl font-bold text-purple-500">{{ $totalVacancies }}</div>
+                    <div class="text-3xl font-bold text-blue-500">{{ $totalVacancies }}</div>
                     <a href="#" class="text-blue-500 hover:underline text-sm mt-4">View Vacancies/Job</a>
                 </div>
                 <div class="bg-white rounded-md shadow-md p-4 flex flex-col justify-between">
