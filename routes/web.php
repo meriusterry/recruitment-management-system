@@ -15,7 +15,7 @@ use App\Http\Controllers\ApplicationController;
 
 Route::get('/', function () {
     $data = Vacancy::where('closing_date', '>=', Carbon::today())
-    ->orderBy('created_at', 'desc')  
+    ->orderBy('created_at', 'desc'); 
     return view('welcome', compact('data'));
 });
 
